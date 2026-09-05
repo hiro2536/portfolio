@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 export default function ProfileSection() {
@@ -36,23 +37,30 @@ export default function ProfileSection() {
           <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
             {/* Avatar with lace border */}
             <div className="relative">
-              <div className="w-32 h-32 rounded-full bg-secondary flex items-center justify-center text-4xl font-bold text-foreground border-4 border-primary">
-                YN
+              <div className="w-42 h-42 md:w-48 md:h-48 rounded-full bg-secondary overflow-hidden border-4 border-primary relative flex items-center justify-center shadow-md">
+                <img
+                  src="/usako.png"
+                  alt="プロフィール画像"
+                  className="w-full h-full object-cover"
+                />
               </div>
               {/* Decorative lace around avatar */}
-              <div className="absolute -inset-2 rounded-full border-2 border-dashed border-primary/50" />
-              <div className="absolute -inset-4 rounded-full border border-dotted border-accent/40" />
+              <div className="absolute -inset-2 rounded-full border-2 border-dashed border-primary/50 pointer-events-none" />
+              <div className="absolute -inset-4 rounded-full border border-dotted border-accent/40 pointer-events-none" />
             </div>
             
             <div className="text-center md:text-left">
-              <h3 className="text-2xl font-bold text-foreground mb-2">山田 なまえ</h3>
-              <p className="text-accent font-medium mb-4">Yamada Namae</p>
+              <h3 className="text-2xl font-bold text-foreground mb-2">ひろ</h3>
+              <p className="text-accent font-medium mb-4">Hiro</p>
               <div className="flex flex-wrap justify-center md:justify-start gap-2">
                 <span className="px-4 py-1 bg-secondary text-secondary-foreground rounded-full text-sm border border-primary/30">
                   福岡工業大学
                 </span>
                 <span className="px-4 py-1 bg-secondary text-secondary-foreground rounded-full text-sm border border-primary/30">
                   情報工学部
+                </span>
+                <span className="px-4 py-1 bg-secondary text-secondary-foreground rounded-full text-sm border border-primary/30">
+                  情報工学科
                 </span>
                 <span className="px-4 py-1 bg-secondary text-secondary-foreground rounded-full text-sm border border-primary/30">
                   3年生
@@ -63,9 +71,8 @@ export default function ProfileSection() {
           
           <div className="relative z-10 mt-8 pt-8 border-t border-dashed border-primary/30">
             <p className="text-muted-foreground leading-relaxed text-center md:text-left">
-              Webアプリケーション開発に情熱を持つ大学生です。
-              ユーザー体験を大切にした、美しく機能的なプロダクトを作ることを目指しています。
-              日々新しい技術を学びながら、エンジニアとしての成長を続けています。
+             情報技術研究部（じょぎ）に所属し、ハッカソンやチーム開発に取り組んできました。<br></br>
+             使う人に喜んでもらえるサービスを作ることを目指し、現在は個人開発にも挑戦しています！
             </p>
           </div>
         </div>
